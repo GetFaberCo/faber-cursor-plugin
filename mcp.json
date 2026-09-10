@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "faber": {
+      "url": "https://api.getfaber.co/mcp",
+      "auth": {
+        "CLIENT_ID": "REPLACE_WITH_SUPABASE_OAUTH_CLIENT_ID",
+        "scopes": ["openid", "email", "profile", "offline_access"]
+      }
+    }
+  }
+}

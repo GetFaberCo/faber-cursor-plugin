@@ -1,0 +1,20 @@
+{
+  "name": "faber",
+  "description": "Turn work you just did by hand into an automation that keeps running. Faber sets up the task, shows you a preview run before anything is real, holds the actions you flagged for your approval, and keeps a record of every run.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Faber"
+  },
+  "homepage": "https://getfaber.co/mcp",
+  "repository": "https://github.com/getfaber/faber-cursor-plugin",
+  "license": "MIT",
+  "logo": "faber-logo.svg",
+  "keywords": [
+    "automation",
+    "mcp",
+    "email",
+    "scheduling",
+    "approvals",
+    "workflow"
+  ]
+}
