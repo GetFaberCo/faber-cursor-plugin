@@ -3,7 +3,7 @@
     "faber": {
       "url": "https://api.getfaber.co/mcp",
       "auth": {
-        "CLIENT_ID": "REPLACE_WITH_SUPABASE_OAUTH_CLIENT_ID",
+        "CLIENT_ID": "e6416d5a-de39-4808-b6e6-281b6593c852",
         "scopes": ["openid", "email", "profile", "offline_access"]
       }
     }
