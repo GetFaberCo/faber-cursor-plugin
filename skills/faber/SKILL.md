@@ -43,3 +43,26 @@ the person before anything is armed.
 `approve_run` releases real messages to real people. Call it only to carry a yes
 the person gave you in this conversation, naming the writes they agreed to.
 Never on your own reading of the output.
+
+## Changing their mind is a tool call, not a trip to the app
+
+The second session is where the person changes something. Every change has a
+tool, and none of them rebuild the task:
+
+- Changed code for a task you wrote, after the preview, their feedback, or
+  the findings: `update_task_source`. The same check runs, the old source is
+  kept as a version, and the task keeps its id, settings and connections.
+  Never a new task for a fix.
+- A run they want to end: `stop_run`.
+- A new name, a new schedule, a setting answered differently, or the task put
+  away: `update_task`. Archiving is as close to deleting as Faber gets, and it
+  can be undone the same way.
+- Something the task remembers and should forget, or a watermark to move
+  back: read `memory` on `get_task`, then `edit_task_memory`.
+- A change that made things worse: `versions` on `get_task`, then
+  `restore_task_version`. Preview again before it runs live.
+- A file a run made: `artifacts` on `get_run`, then `get_run_artifact`.
+- A profile that is empty (`filled` on `list_profiles`): `fill_profile`, from
+  their sent mail or a website, only when they asked.
+- An account they no longer want Faber to hold: `disconnect_account`. Every
+  task on it stops at its next run, so carry their request, never your guess.
