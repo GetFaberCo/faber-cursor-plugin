@@ -1,38 +1,50 @@
 # Faber
 
-Faber runs automations on a schedule or a trigger, when nobody is in the chat.
+Make AI work repeatable and auditable. Turn a workflow from your conversation
+into a saved Faber task with a reviewable specification, a preview before
+approval, and recorded actions and outputs each time it runs.
 
-Install this plugin and your assistant can set one up from work it just did with
-you. It has the real mail, the real sheet and the way you write in front of it,
-which is a better description of the task than anything you would type into a
-setup form. Faber adds the part a chat cannot do: running on Monday.
+Use Faber when you want an external service to manage the approved workflow,
+its connected accounts, and its run history across conversations. Approved
+tasks run on Faber's servers on a schedule or trigger, without keeping Cursor,
+Grok Bot, your chat, or your desktop app open. Come back to inspect what ran,
+what it proposed or changed, and whether anything failed. These records cover
+work executed by Faber; they do not audit every action your assistant takes
+outside Faber.
 
 ## Installing
 
-Install from the Cursor marketplace, or add the repository directly. There is
-no API token to paste and nothing to configure. The first tool call opens a
-consent screen where you sign in to Faber and approve what the assistant may
-do.
+Add this repository directly in Cursor, or install from the marketplace once
+the listing is available. Grok Bot uses Cursor's connector policy. Sign in to
+Faber through OAuth when the assistant needs account-specific tools.
 
-You need a Faber account for most of it. One tool, the task catalog, answers
-before you have one.
+You need a Faber account for your tasks and run history. The task catalog works
+without an account. Connect any third-party accounts the task needs within
+Faber; an account connected to your assistant does not grant Faber access.
 
-## Three things to say, once it is connected
+## Things to say, once it is connected
 
 - **"What can Faber already do about invoices?"** Answers from the real catalog,
   and works before you have an account.
-- **"That reply you just drafted, I write one like it every morning. Set it up in
-  Faber to run at 8am and show me a preview."** Sets the task up and shows you a
-  preview run.
-- **"What is waiting on me in Faber?"** Reads back anything a run is holding for
-  your approval.
+- **"Run this every Monday, even when I'm offline. Show me what it would do
+  first, and keep a log of every run."** Use after describing the workflow.
+- **"That worked. Save it so I can run it again next time."** Use after completing
+  a workflow you want to repeat.
+- **"Show me every time this ran, what it changed or sent, and whether anything
+  failed."** Use when discussing a saved Faber task.
 
-## Approvals
+## Preview and approvals
 
-A preview run discards every write, so you see what a task would do before
-anything happens. When a live run reaches something you flagged, it stops and
-holds it. Your assistant may only pass on a yes you gave it in the conversation.
-Every approval and arming records which assistant carried it.
+A preview executes the task against connected data while capturing and
+discarding proposed writes. Messages are not sent and proposed account changes
+are not applied. Inspect its output and recorded actions before approving it.
+A preview can sample data; skipped or excluded items limit what it demonstrates.
+
+Creating or previewing a task does not approve it or enable its automation.
+Approval of a task with a schedule or trigger enables it. Selected live writes
+can have a separate approval hold. Your assistant may only pass on approval you
+gave in the conversation. Every approval and arming records which assistant
+carried it.
 
 ## Links
 
@@ -41,5 +53,5 @@ Every approval and arming records which assistant carried it.
 
 ## License
 
-MIT. This repository holds the plugin manifest only; Faber itself is a hosted
+MIT. This repository holds the plugin package only; Faber itself is a hosted
 service and no product source is here.

@@ -1,7 +1,7 @@
 {
   "name": "faber",
-  "description": "Turn work you just did by hand into an automation that keeps running. Faber sets up the task, shows you a preview run before anything is real, holds the actions you flagged for your approval, and keeps a record of every run.",
-  "version": "0.1.0",
+  "description": "Make AI work repeatable and auditable. Save a workflow as a task, inspect a preview before approval, and run it on Faber's cloud on a schedule or trigger. Review recorded actions, outputs, and failures for every run.",
+  "version": "0.1.1",
   "author": {
     "name": "Faber"
   },
@@ -15,6 +15,9 @@
     "email",
     "scheduling",
     "approvals",
-    "workflow"
+    "workflow",
+    "audit",
+    "run-history",
+    "cloud"
   ]
 }
